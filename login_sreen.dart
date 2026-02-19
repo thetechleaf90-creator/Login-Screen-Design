@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,22 +17,24 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Header and Icons
+                // Header and Logo
                 Icon(Icons.lock_person_rounded, size: 120, color: Colors.teal),
-                SizedBox(height: 8),
-                Text("Welcome Back", style: TextStyle(fontSize: 40)),
-                SizedBox(height: 12),
-                // Email Id
+                Text(
+                  "Welcome Back",
+                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                ),
+                // Email ID Field
+                SizedBox(height: 24),
                 TextFormField(
                   decoration: InputDecoration(
-                    labelText: "Email",
+                    labelText: "Email ID",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
                 ),
-                SizedBox(height: 12),
-                // Password
+                // Password Field
+                SizedBox(height: 16),
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: "Password",
@@ -39,21 +43,21 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Forgor Password
+                // Forgot Password Button
                 Align(
                   alignment: Alignment.topRight,
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
                       "Forgot Password?",
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 16),
                     ),
                   ),
                 ),
                 // Login Button
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 80),
+                    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 80),
                     backgroundColor: Colors.teal,
                   ),
                   onPressed: () {},
@@ -62,17 +66,17 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
-                // Sign Up
+                // Sign Up Button
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Don't have an account",
-                      style: TextStyle(fontSize: 18),
+                      "Don't have an account?",
+                      style: TextStyle(fontSize: 16),
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: Text("Sign Up", style: TextStyle(fontSize: 18)),
+                      child: Text("Sign Up", style: TextStyle(fontSize: 16)),
                     ),
                   ],
                 ),
