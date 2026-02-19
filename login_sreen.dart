@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
-                // Sing Up
+                // Sign Up
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
